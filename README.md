@@ -1,12 +1,14 @@
 # Django With MongoDB
-
 Env Versions.
-  - CentOS   7.8 
-  - Python   3.8.3
-  - Django   3.0.6
-  - Docker   19.03
-  - Maria DB 10.4
-  - Mongo DB 
+
+| Name | Version |
+| ------ | ------ |
+| CentOS | 7.8  |
+| Python | 3.8.3 |
+| Django | 3.0.6 |
+| Docker | 1.13 |
+| MariaDB | 10.4 |
+| MongoDB | 4.2.7 |
 
 ### Install pyenv
 ```
@@ -46,11 +48,28 @@ $ source dm_venv/bin/activate
 (When want stop, $ deactivate)
 ```
 #
-## Create Django Project
-### Install Django
+### Django
 ```
-$ python -m pip install Django 
+$ python -m pip install Django
 $ python -m django --version
 ```
 
-### Create
+### Before Start Django
+Install Docker and create MariaDB, MongoDB Container.
+
+See the install_docker.md for more information.
+
+[install_docker.md](https://github.com/sanggi-wjg/django_mongodb/blob/master/install_docker.md)
+
+### Dependencies
+```
+$ yum install mariadb-devel
+$ pip install mysqlclient
+```
+
+## Notes
+
+| Name | Ref |
+| ------ | ------ |
+| Setup Django | [Setup Django](https://github.com/sanggi-wjg/django_mongodb/blob/master/setup_django.md) |
+
