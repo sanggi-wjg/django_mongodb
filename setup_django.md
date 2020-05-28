@@ -2,9 +2,18 @@
 ```
 $ django-admin startproject sample
 ```
+That will create a directory **sample**.
+```
+sample - manage.py
+       - sample    - asgi.py
+                   - settings.py
+                   - urls.py
+                   - wsgi.py
+```
+
 ##
 
-#### sample/sample/settings.py
+### sample/sample/settings.py
 > Before
 ```
 DATABASES = {
@@ -28,3 +37,27 @@ DATABASES = {
 }
 ```
 
+##
+### DB migrate
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+```
+ MariaDB [backend]> show tables;
+ +----------------------------+
+ | Tables_in_backend          |
+ +----------------------------+
+ | auth_group                 |
+ | auth_group_permissions     |
+ | auth_permission            |
+ | auth_user                  |
+ | auth_user_groups           |
+ | auth_user_user_permissions |
+ | django_admin_log           |
+ | django_content_type        |
+ | django_migrations          |
+ | django_session             |
+ +----------------------------+
+ 10 rows in set (0.000 sec)
+```

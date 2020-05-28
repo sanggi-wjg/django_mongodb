@@ -72,4 +72,6 @@ $ pip install mysqlclient
 | Name | Ref |
 | ------ | ------ |
 | Setup Django | [Setup Django](https://github.com/sanggi-wjg/django_mongodb/blob/master/setup_django.md) |
+| Django App | [Django App](https://github.com/sanggi-wjg/django_mongodb/blob/master/django_app.md) |
+| debug_toolbar |  |
 
