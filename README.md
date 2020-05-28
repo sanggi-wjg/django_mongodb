@@ -59,7 +59,7 @@ Install Docker and create MariaDB, MongoDB Container.
 
 See the install_docker.md for more information.
 
-[install_docker.md](https://github.com/sanggi-wjg/django_mongodb/blob/master/install_docker.md)
+[install_docker.md](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/0_install_docker.md)
 
 ### Dependencies
 ```
@@ -71,7 +71,8 @@ $ pip install mysqlclient
 
 | Name | Ref |
 | ------ | ------ |
-| Setup Django | [Setup Django](https://github.com/sanggi-wjg/django_mongodb/blob/master/setup_django.md) |
-| Django App | [Django App](https://github.com/sanggi-wjg/django_mongodb/blob/master/django_app.md) |
+| Setup Django | [Setup Django](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/1_setup_django.md) |
+| Django App | [Django App](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/2_django_app.md) |
+| Django Model | [Django App](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/3_django_model.md) |
 | debug_toolbar |  |
 
