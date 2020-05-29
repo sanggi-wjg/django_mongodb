@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'stock.apps.StockConfig',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+INTERNAL_IPS = ['127.0.0.1', '192.168.10.81']
 
 ROOT_URLCONF = 'sample.urls'
 
@@ -83,6 +88,31 @@ DATABASES = {
         'PASSWORD': 'wpdlwl',
         'PORT'    : '33061',
     }
+}
+
+LOGGING = {
+    'version'                 : 1,
+    'disable_existing_loggers': False,
+    'formatters'              : {
+        'basic': {
+            'format': '[%(asctime)s] %(message)s'
+        }
+    },
+    'handlers'                : {
+        'file': {
+            'level'    : 'DEBUG',
+            'class'    : 'logging.FileHandler',
+            'formatter': 'basic',
+            'filename' : os.path.join(os.path.dirname(BASE_DIR), "database.log")
+        },
+    },
+    'loggers'                 : {
+        'django.db.backends': {
+            'handlers' : ['file'],
+            'level'    : 'DEBUG',
+            'propagate': False,
+        },
+    },
 }
 
 # Password validation
@@ -120,3 +150,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
