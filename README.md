@@ -76,3 +76,4 @@ $ pip install mysqlclient
 | Model | [Django Model](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/3_django_model.md) |
 | Pycharm | Pycharm sets the HTML file auto-complete code or label for Django templates http://www.programmersought.com/article/790273239/ |
 | View  | [Django View](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/4_django_view.md) |
+| Signup, Login  | [Django Signup, Login](https://github.com/sanggi-wjg/django_mongodb/blob/master/notes/4_django_view.md) |

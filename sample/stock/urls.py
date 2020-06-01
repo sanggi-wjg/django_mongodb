@@ -2,10 +2,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 
-from . import views
+from .views import StockItemList, StockItemDetail
 
 urlpatterns = [
-    path('', views.index),
-    path('<str:code>', views.detail),
+    path('', StockItemList.as_view()),
+    path('<str:code>', StockItemDetail.as_view()),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

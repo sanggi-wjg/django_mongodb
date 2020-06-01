@@ -56,6 +56,10 @@ MIDDLEWARE = [
 
 INTERNAL_IPS = ['127.0.0.1', '192.168.10.81']
 
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
 ROOT_URLCONF = 'sample.urls'
 
 TEMPLATES = [
@@ -150,6 +154,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+SIGNUP_URL = '/signup'
+LOGIN_URL = '/login'
 
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
