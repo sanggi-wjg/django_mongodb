@@ -10,7 +10,7 @@ class StockItemList(LoginRequiredMixin, ListView):
     context_object_name = 'stock_items'
     template_name = 'stock/stock_item_list.html'
     extra_context = {
-        'view_title': '주식 종목'
+        'view_title': 'Stock List'
     }
 
 
@@ -18,7 +18,7 @@ class StockItemDetail(LoginRequiredMixin, ListView):
     template_name = 'stock/stock_item_detail.html'
     context_object_name = 'stock_items'
     extra_context = {
-        'view_title': '주식 상세'
+        'view_title': 'Stock Detail'
     }
 
     def get_queryset(self):

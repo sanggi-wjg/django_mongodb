@@ -9,7 +9,8 @@ from django.views.generic.base import View
 class HomeView(View):
     def get(self, request):
         return render(request, 'comm/home.html', {
-            'view_title': 'Home'
+            'view_title': 'Home',
+            'is_auth'   : request.user.is_authenticated,
         })
 
 

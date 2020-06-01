@@ -8,7 +8,9 @@
 </head>
 <body>
 Hello, this page is HOME.
-<a href="/login">로그인</a>
-<a href="/signup">회원가입</a>
+{% if not is_auth %}
+    <a href="/login">로그인</a>
+    <a href="/signup">회원가입</a>
+{% endif %}
 </body>
 </html>
