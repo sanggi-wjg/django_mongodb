@@ -1,5 +1,7 @@
 from django.db import models
 
+from .querysets import ItemsQuerySet
+
 """
 python manage.py makemigrations stock
 
@@ -14,8 +16,10 @@ class Items(models.Model):
     code = models.CharField(max_length = 10)
     name = models.CharField(max_length = 100)
 
+    objects = ItemsQuerySet.as_manager()
+
     def __str__(self):
-        return '{} {}'.format(self.code, self.name)
+        return '[{}] {}({})'.format(self.id, self.code, self.name)
 
 
 class Pivot(models.Model):
