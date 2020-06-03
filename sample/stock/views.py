@@ -16,17 +16,15 @@ class StockItemList(LoginRequiredMixin, ListView):
 
 
 class StockItemDetail(LoginRequiredMixin, ListView):
+    model = Items
     template_name = 'stock/stock_item_detail.html'
     context_object_name = 'stock_items'
-
-    def get_queryset(self):
-        return get_object_or_404(Items, code = self.kwargs['code'])
 
     def get_context_data(self, **kwargs):
         mongo = MongoDB()
 
         return {
             'view_title'  : 'Stock Detail',
-            'stock_item'  : self.get_queryset(),
+            'stock_item'  : get_object_or_404(Items, code = self.kwargs['code']),
             'finance_info': mongo.find_one('finance_info', { "stock_items_code": self.kwargs['code'] })
         }
