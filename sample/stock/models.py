@@ -26,6 +26,10 @@ class Pivot(models.Model):
     id = models.AutoField(primary_key = True)
     stock_items_id = models.ForeignKey(Items, on_delete = models.DO_NOTHING)
 
+    prev_closing_price = models.PositiveIntegerField(blank = False, null = False, default = 0)
+    prev_high_price = models.PositiveIntegerField(blank = False, null = False, default = 0)
+    prev_low_price = models.PositiveIntegerField(blank = False, null = False, default = 0)
+
     resist_line_3 = models.PositiveIntegerField(blank = True, null = True, default = None)
     resist_line_2 = models.PositiveIntegerField(blank = True, null = True, default = None)
     resist_line_1 = models.PositiveIntegerField(blank = True, null = True, default = None)

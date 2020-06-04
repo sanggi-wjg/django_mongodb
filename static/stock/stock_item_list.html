@@ -17,7 +17,7 @@
         {% for stock in stock_items %}
             <div class="content-detail">
                 <a href="{{ stock.code }}">[{{ stock.code }}] {{ stock.name }}</a>
-                <input type="button" value="Pivot 입력" onclick="">
+                <input type="button" value="Pivot 입력" onclick="openWindow('add/{{ stock.code }}', 400, 600)">
             </div>
         {% endfor %}
     </div>
